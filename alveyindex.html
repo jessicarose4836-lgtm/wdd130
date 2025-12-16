@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alvey Portal Page</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div id="wrapper">
+        <nav>
+            <img src="" alt="logo">
+            <h1>Alvey's Portal Page</h1>
+        </nav>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">WWR</a>
+            <a href="#">ICE</a>
+            <a href="#">Project</a>
+        </nav>
+        <main>
+            <section>WWR</section>
+            <section>ICE</section>
+            <section>Project</section>
+            <section>About Me</section>
+            <section id="ads">Form
+
+            </section>
+        </main>
+        <footer>
+            <a href="#">Home</a>
+            <a href="#">WWR</a>
+            <a href="#">ICE</a>
+            <a href="#">Project</a>
+        </footer>
+    </div>
+</body>
+
+<!-- use to keep nav consistent over multiple pages on portal page website -->
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("nav").innerHTML = data;
+            });
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    })
+</script> <!--make a nav.html so only one page needs to be edited-->
+</html>

@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*midnight blue(223A5E) soft teal(A7D4CB) soft coral(E89E8A) muted sage(B5C6A8) off white(FEFBF8)*/
+body {
+    background-color: #FEFBF8;
+    line-height: 1.6;
+    color: #223A5E;
+    font-family: ""; /*add font here*/
+}
+
+/*Centered rounded page container */
+body > * {
+    max-width: 1100px;
+    margin: 30px auto;
+    background-color: #FEFBF8;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+/*Header/Hero*/
+.header-banner {
+    height: 250px;
+    background-color: #A7D4CB;
+}
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Navigation*/
+nav {
+    background-color: #223A5E;
+}

@@ -1,0 +1,147 @@
+/* Add your CSS here to style your halloween page */
+@import url('https://fonts.googleleapis.com/css2?family=Creepster&family=Montserrat:wght@300;600&display=swap');
+:root {
+    --bg1: #0b0f17;
+    --bg2: #1b0f2a;
+    --accent: #ff7f11;
+    --accent-light: #ffd37a;
+    --text: #f8f7f5;
+    --muted: rgba (255,255,255,255,0.65);
+} /* what is this? */
+
+/* Base layout */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(text);
+    background: radial-gradient(circle at top left, #1b0f2a 0%, #0b0f17 80%); /* what is this? */
+    min-height: 100vh;
+    overflow-x: hidden; /* what is this? */
+    position: relative;
+}
+
+/* Fog overlay (for atmoshere) */
+body::before, body::after {
+    content: "";
+    position: fixed;
+    inset: 0; /* what is this? */
+    background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.04), transparent 40%), radial-gradient(circle at 70% 60%, rgba(255,255,255,0.02), transparent 40%); /* what is this? */
+    filter: blur(60px);
+    opacity: 0.6;
+    animation: drift 60s linear infinite;
+    pointer-events: none; /* what is this? */
+    z-index: 0;
+}
+body::after {
+    animation-direction: reverse;
+    opacity: 0.4;
+}
+@keyframes drift {
+    from { transform: translateX(0); }
+    to { transform: translateX(-20%); }
+} /* what is this? */
+
+/* Wrapper styles */
+#wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 900pxxx;
+    margin: 0 auto;
+    padding: 20px 30px 60px;
+}
+
+/* Header and navigation */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+nav li {
+    font-family: 'Creepster', cursive;
+    font-size: 1.5rem;
+    color: var(--accent);
+    cursor: pointer;
+    text-shadow: 0 0 10px var(--accent-light), 0 0 25px var(--accent);
+    transition: transform 0.2s ease, color 0.2 ease;
+}
+nav li:hover {
+    transform: scale(1.2); /* what is this? */
+    color: var(--accent-light);
+}
+
+/* Main area */
+main {
+    text-align: center;
+}
+main h1 {
+    font-family: 'Creepster', cursive;
+    font-size: 3rem;
+    color: var(--accent-light);
+    text-shadow: 0 0 25px var(--accent), 0 0 50px var(--accent-light);
+    margin-bottom: 10px;
+}
+main img {
+    width: 300px;
+    max-width: 80%;
+    display: block;
+    margin: 20px auto 40px;
+    filter: drop-shadow(0 0 30px rgba(255,127,17,0.5));
+    animation: float 5s ease-in-out infinite;
+}
+@keyframes float {
+    0%,100% { transform: translateY(0);}
+    50% { transform: translateY(-10px);}
+} /* what is this? */
+
+/* Section styling */
+section {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,127,17,0.3);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 30px auto;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    text-align: left;
+    max-width: 700px;
+    position: relative;
+}
+section::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px dashed rgba(255,127,17,0.5);
+    border-radius: 14px;
+    pointer-events: none; /* what is this? */
+}
+section h2 {
+    font-family: 'Creepster', cursive;
+    color: var(--accent);
+    font-size: 2rem;
+    margin-top: 0;
+    text-shadow: 0 0 10px var(--accent-light);
+}
+section p {
+    color: var(--accent-light);
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: var(--accent);
+    font-weight: 600;
+    font-family: 'Creepster', cursive;
+    text-shadow: 0 0 15px var(--accent-light);
+}

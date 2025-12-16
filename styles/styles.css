@@ -1,0 +1,78 @@
+body {
+    background: #555555 url("../images/bamboo.png") repeat;
+
+}
+
+header img {
+    width: 178px;
+    float: left;
+}
+
+header {
+    background: url("../images/forest.jpg");
+    height: 178px;
+}
+header h1 {
+    font-size: 3em;
+    color: #f5f0e6
+    float: left;
+    margin: 50px 80px 50px 112px;
+    text-shadow: 4px 4px 2px #000000;
+}
+
+nav {
+    background: #f47fa3;
+    clear: both;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 20px solid #555555;
+    padding: 30px;
+    box-sizing: border-box;
+    border-top: 3px solid #000000;
+    border-bottom: ;
+}
+
+nav a {
+    color: #f5f0e6;
+    text-decoration: none;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+}
+
+#wrapper {
+    width: 900px;
+    height: 1000px;
+    background: #f5f0e6;
+    margin: auto;
+    border: #000000 solid 5px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#ads {
+    width: 200pxborder: 3px solid #000000;
+    position: fixed;
+    right: 0;
+    background: #f47fa3;
+}
+
+section {
+    background: #a4c639;
+    width: 40%;
+    height: 300px;
+    float: left;
+    margin: 10px;
+}
+
+section img {
+    max-height: 100%;
+}
+
+footer {
+    clear: both;
+}
