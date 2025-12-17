@@ -5,10 +5,10 @@
 }
 /*midnight blue(223A5E) soft teal(A7D4CB) soft coral(E89E8A) muted sage(B5C6A8) off white(FEFBF8)*/
 body {
-    background-color: #FEFBF8;
+    background-color: #223A5E;
     line-height: 1.6;
     color: #223A5E;
-    font-family: ""; /*add font here*/
+    font-family: "ZTNature", Arial, sans-serif;
 }
 
 /*Centered rounded page container */
@@ -23,7 +23,6 @@ body > * {
 /*Header/Hero*/
 .header-banner {
     height: 250px;
-    background-color: #A7D4CB;
 }
 .hero-image {
     width: 100%;
@@ -33,5 +32,227 @@ body > * {
 
 /*Navigation*/
 nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #E89E8A;
+    font-size: 25px;
+    padding: 10px 30px;
+}
+.logo {
+    height: 50px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+nav li {
+    margin: 0 20px;
+}
+nav a {
+    color:#FEFBF8;
+    text-decoration: none;
+    padding: 15px 0;
+    display: block;
+    text-shadow: 3px 3px 5px #223A5E;
+}
+nav a:hover {
+    color: #223A5E;
+}
+
+/*Main*/
+main {
+    padding: 30px;
+    border: 5px solid #A7D4CB;
+}
+main > section {
+    margin-bottom: 60px;
+}
+h2 {
+    margin-bottom: 15px;
+    color:#223A5E; /*may want to do another color*/
+    text-align: center;
+}
+
+/*Intro Section*/
+main > section:first-of-type {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.portrait {
+    width: 250px;
+    border-radius: 15px;
+}
+
+/*WWR & ICE Sections*/
+main > section:nth-of-type(2), main > section:nth-of-type(3) {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.wwr-image, .ice-image {
+    width: 300px;
+    border-radius: 15px;
+}
+
+/*Changing ICE Image Position*/
+main > section:nth-of-type(2) {
+    flex-direction: row-reverse;
+}
+
+/*Project Highlights & Reach Out*/
+main > section:last-of-type {
+    display: flex;
+    gap: 40px;
+}
+
+/*Project Highlights*/
+.project-highlights {
+    flex: 1;
+    background-color: #A7D4CB;
+    border-radius: 15px;
+    padding: 20px;
+}
+.table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+.table th, .table td {
+    border: 1px solid #223A5E;
+    padding: 10px;
+    text-align: center;
+}
+.table th {
+    background-color: #E89E8A;
+}
+.column1 {
+    background-color:#E89E8A;
+}
+td a {
+    color:#223A5E;
+    text-decoration: none;
+    text-shadow: 0px 0px 5px #E89E8A;
+}
+
+.computer-image {
+    display: block;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 20px;
+}
+
+/*Reach Out Form*/
+.reach-out {
+    flex: 1;
+    background-color: #A7D4CB;
+    padding: 20px;
+    border-radius: 15px;
+}
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+.contact-form input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #223A5E;
+}
+button {
+    background-color: #E89E8A;
+    color:#FEFBF8;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+button:hover {
     background-color: #223A5E;
+}
+
+/*Footer*/
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #E89E8A;
+    color:#FEFBF8;
+    align-items: center;
+    font-size: 20px;
+}
+footer a {
+    color:#A7D4CB;
+    text-decoration: none;
+    text-shadow: 3px 3px 5px #223A5E;
+}
+.footer-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font-size: 30px;
+}
+.footer-nav li {
+    margin: 0 20px;
+}
+footer a:hover {
+    color:#223A5E;
+}
+
+/*Fonts*/
+@font-face {
+    font-family: "ZTNature";
+    src: url("fonts/ZTNature/ZTNature-Medium.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+
+/*WWR & ICE Pages*/
+main a {
+    text-decoration: none;
+    color: inherit;
+}
+.tab {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    border: 2px solid #223A5E;
+    border-radius: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #A7D4CB;
+}
+.tab-image img {
+    width: 220px;
+    height: auto;
+    border-radius: 30px;
+    padding: 15px;
+}
+.tab-overview h2 {
+    margin-bottom: 10px;
+}
+.tab-overview p {
+    line-height: 1.6;
+}
+.tab:hover {
+    background-color:#E89E8A;
+    transition: background-color 0.3s ease;
 }
